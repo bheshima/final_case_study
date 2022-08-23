@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body{
+	/*background-image: url("https://media.bizj.us/view/img/11069763/priciestupscaleeats201839*1200xx2925-1645-0-25.jpg");*/
+	background-color:#400000;
+	height:60%; 
+	
+	background-position: center;
+
+	color:white;
+
+	background-size:cover;  
+	background-attachment:fixed;
+	 background-repeat: no-repeat;
+	
+	}
+	
+	
+	.header text-center{
+	color:white;
+	}
+	
+	
+	header{
+	color:white;
+	}
+	
+	.navbar-nav{
+	font-size: 25px;
+
+	
+	}

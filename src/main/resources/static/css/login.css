@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body{
+/*background-color: black;*/
+background-image: url("https://www.chefroccowhalen.com/wp-content/uploads/2013/11/fire-fahrenheit.jpg");
+
+
+background-size:cover;  
+color:white;
+
+}
+/*
+button:hover{
+background-color: green;
+
+}
+
+*/
+
+form{
+		width:40%;
+		margin-right:50%
+ 	
+}
+
+
+ button:hover{
+background-color: green;
+}

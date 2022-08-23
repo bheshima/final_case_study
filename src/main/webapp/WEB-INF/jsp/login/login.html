@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+
+<div class="header text-center">
+	<h1>Recipe Share</h1>
+	<p>Share your favorite recipes with the world.</p>
+</div>
+	<nav class="navbar fixed-navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="/home">Home</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="/createUser">Create
+							User</a>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- navbar -->
+
+<div class="container">
+  	<!-- Login form -->
+	<h1>Login</h1>
+
+
+	<form method="post" action="/login/login">
+
+		<c:choose>
+			<c:when test="${not empty Error }">
+				<div style="color: red">Invalid email or password.</div>
+			</c:when>
+		</c:choose>
+
+		<% if(response.getStatus() == 500){ %>
+			<div style="color: red">Invalid email or password.</div>
+		<%}%>
+
+
+
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Email
+				address</label> <input type="email" name="username" value="" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Password</label>
+			<input type="password" name="password" class="form-control">
+		</div>
+			<button type="submit" value="submit" class="btn btn-primary">Submit</button>
+			<c:if
+			test="${(not empty param.error) && (not empty SPRING_SECURITY_LAST_EXCEPTION)}">
+		</c:if>
+		 <input type="checkbox" checked="checked" name="remember"> Remember
+	</form>
+</div>
+
+
+
+
+
+</body>
+</html>
